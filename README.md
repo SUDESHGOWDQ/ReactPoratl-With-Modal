@@ -1,8 +1,11 @@
-# React + Vite
+# In the context of React and modern web development, CreatePortal typically refers to the ReactDOM.createPortal function. This function allows you to render a component or element outside of its parent component's DOM hierarchy, essentially creating a "portal" to another part of the DOM.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Here’s a breakdown of what it means:
 
-Currently, two official plugins are available:
+Portals in React: Portals provide a way to render children into a different part of the DOM tree that is outside of the parent component's DOM hierarchy. This can be useful for scenarios where you want to render modals, tooltips, or other elements that need to visually break out of their container but still be managed by React's rendering system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Usage: ReactDOM.createPortal(child, container) takes two arguments:
+
+child: The React element you want to render.
+container: The DOM node to which you want to render the child.
+Example: If you have a modal component that you want to render at the end of the <body> element rather than inside a specific container, you could use a portal like this:
